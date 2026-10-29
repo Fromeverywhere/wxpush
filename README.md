@@ -160,18 +160,12 @@ curl -X POST "[http://127.0.0.1:10008/send?key=你的PUSH_KEY](http://127.0.0.1:
 
 ## 🤝 贡献与构建
 
-感谢原作者分享：
+感谢原作者分享，原项目主页https://github.com/x9xi99/wxpush-docker-go：
 
 ```bash
-# 1. 克隆代码
-git clone [https://github.com/x9xi99/wxpush-docker-go.git](https://github.com/x9xi99/wxpush-docker-go.git)
+# 克隆代码
+git clone [https://github.com/Fromeverywhere/wxpush.git](https://github.com/Fromeverywhere/wxpush.git)
 
-# 2. 构建镜像
-docker build -t my-wxpush .
-
-# 3. 运行
-docker run -d -p 10008:10008 --env-file .env my-wxpush
-```
 
 ## 📝 License
 
