@@ -1,0 +1,59 @@
+nohup: ignoring input
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 985B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/golang:1-alpine
+#2 ...
+
+#3 [internal] load metadata for docker.io/library/alpine:latest
+#3 DONE 30.3s
+
+#2 [internal] load metadata for docker.io/library/golang:1-alpine
+#2 DONE 31.6s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [builder 1/4] FROM docker.io/library/golang:1-alpine@sha256:d200d2dd76b03a99b52651fd1325aff7dcd35422c35c01bac56571b0507f3deb
+#5 DONE 0.0s
+
+#6 [stage-1 1/4] FROM docker.io/library/alpine:latest@sha256:be2656061b536c1883c4034790e21d0a09c5aaaf51968b89368a3c0371ea2c9a
+#6 CACHED
+
+#7 [internal] load build context
+#7 transferring context: 73B done
+#7 DONE 0.0s
+
+#8 [builder 2/4] WORKDIR /app
+#8 CACHED
+
+#9 [builder 3/4] COPY main.go .
+#9 CACHED
+
+#10 [builder 4/4] RUN if [ "amd64" = "arm" ]; then       export GOARM=$(echo  | cut -c 2);     fi;     CGO_ENABLED=0 GOOS=linux GOARCH=amd64     go build -ldflags="-s -w" -o server main.go
+#10 CACHED
+
+#11 [stage-1 2/4] RUN apk --no-cache add ca-certificates tzdata
+#11 633.0 WARNING: fetching https://dl-cdn.alpinelinux.org/alpine/v3.24/community/x86_64/APKINDEX.tar.gz: v2 database format error
+#11 633.0 (1/2) Installing ca-certificates (20261020-r0)
+#11 637.7 (2/2) Installing tzdata (2026e-r0)
+#11 699.3 Executing busybox-1.37.0-r31.trigger
+#11 699.3 Executing ca-certificates-20261020-r0.trigger
+#11 699.4 OK: 8856 KiB in 18 packages
+#11 DONE 699.5s
+
+#12 [stage-1 3/4] WORKDIR /root/
+#12 DONE 0.1s
+
+#13 [stage-1 4/4] COPY --from=builder /app/server .
+#13 DONE 0.1s
+
+#14 exporting to image
+#14 exporting layers 0.1s done
+#14 writing image sha256:bf524a9c9daf1f1cf9caa3ea3ef0b91179a04deb68e938dd027896c229f42efa done
+#14 naming to docker.io/library/wxpush-proxy:latest done
+#14 DONE 0.1s
