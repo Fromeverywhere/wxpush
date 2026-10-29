@@ -89,7 +89,7 @@ docker-compose up -d
 支持简写模式，直接传 `content` 即可。
 
 ```bash
-curl -X POST "[http://127.0.0.1:10008/send?key=你的PUSH_KEY](http://127.0.0.1:10008/send?key=你的PUSH_KEY)" \
+curl -X POST "http://127.0.0.1:10008/send?key=你的PUSH_KEY" \
      -H "Content-Type: application/json" \
      -d '{
        "msgtype": "text",
@@ -101,7 +101,7 @@ curl -X POST "[http://127.0.0.1:10008/send?key=你的PUSH_KEY](http://127.0.0.1:
 Markdown 支持颜色高亮，适合做监控告警。
 
 ```bash
-curl -X POST "[http://127.0.0.1:10008/send?key=你的PUSH_KEY](http://127.0.0.1:10008/send?key=你的PUSH_KEY)" \
+curl -X POST "http://127.0.0.1:10008/send?key=你的PUSH_KEY" \
      -H "Content-Type: application/json" \
      -d '{
        "msgtype": "markdown",
@@ -115,7 +115,7 @@ curl -X POST "[http://127.0.0.1:10008/send?key=你的PUSH_KEY](http://127.0.0.1:
 适合做漂亮的通知跳转。
 
 ```bash
-curl -X POST "[http://127.0.0.1:10008/send?key=你的PUSH_KEY](http://127.0.0.1:10008/send?key=你的PUSH_KEY)" \
+curl -X POST "http://127.0.0.1:10008/send?key=你的PUSH_KEY" \
      -H "Content-Type: application/json" \
      -d '{
        "msgtype": "textcard",
